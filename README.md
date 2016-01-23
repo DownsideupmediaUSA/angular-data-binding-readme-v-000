@@ -16,7 +16,7 @@ We've talked about data-binding before, but if it's not on the top of your memor
 
 The curly braces syntax (`{{ }}`) binds our model value into our view in the form of text. This is one-way bound - the model can update the view, but our view cannot update the model (you can't type into text - only an input!).
 
-We can also bind text into the DOM using a `ng-bind` attribute on the HTML element instead.
+We can also bind text into the DOM using a `ng-bind` attribute on the HTML element instead. If we use `ng-bind`, the whole text content of the element is replaced with the value, whereas with the curly braces only the curly braces is replaced. Either can be used, but curly braces are simpler. 
 
 ```js
 {{ name }}
@@ -48,3 +48,11 @@ $scope.$watch('name', function (newValue, oldValue) {
 ```
 
 We could use this with the two-way data-binding example above. This would fire a `console.log` statement every time the user types in the input!
+
+When would we actually need to use this? For example, in a game we could watch for changes to our name value and broadcast it to everyone else - 
+
+```js
+$scope.$watch('name', function (newValue, oldValue) {
+  socket.emit('Player ' + oldValue + ' has changed their name to ' + newValue);
+});
+```
