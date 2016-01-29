@@ -56,3 +56,4 @@ $scope.$watch('name', function (newValue, oldValue) {
   socket.emit('Player ' + oldValue + ' has changed their name to ' + newValue);
 });
 ```
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-data-binding-readme' title='angular-data-binding-readme'>angular-data-binding-readme</a> on Learn.co and start learning to code for free.</p>
