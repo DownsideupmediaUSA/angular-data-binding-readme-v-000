@@ -1,4 +1,4 @@
-tags: 
+tags:
   - angular
   - data binding
   - scope
@@ -6,5 +6,5 @@ languages:
   - javascript
 frameworks:
   - angular
-resources: 
+resources:
   - 0
