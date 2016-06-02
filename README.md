@@ -33,7 +33,7 @@ We can two-way bind our data into certain HTML elements - ones that accept input
 <input type="text" ng-model="name" />
 ```
 
-Whenever we type in our `<input />`, or `$scope.name` gets updated, they will both reflect the changes to the value. 
+Whenever we type in our `<input />`, our `$scope.name` gets updated, they will both reflect the changes to the value. 
 
 ## Watching for updates
 
